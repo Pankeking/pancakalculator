@@ -1,15 +1,24 @@
-import react from "react";
-import { connect } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { updateExpression, updateResult } from "../features/actions.js";
 
-const Button = ({ label, onClick }) => {
+const Btn = ({ text, className }) => {
+
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        //dispatch(updateExpression(label))
+        //dispatch(updateResult(value))
+    }
+
     return (
         <button 
-            className="w-1/4 h-12 text-2x1 bg-gray-200"
-            onClick={onClick}
+            className={`bg-gray-300 py-2 text-center font-black font-mono cursor-pointer border-8 opacity-75 hover:opacity-100 rounded-full ${className}`}
+            onClick={handleClick}
         >
-            {label}
+            {text}
         </button>
     );
 };
 
-export default Button;
+export default Btn;

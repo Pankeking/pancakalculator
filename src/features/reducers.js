@@ -1,27 +1,28 @@
+// reducers.js
+
+import { createSlice } from '@reduxjs/toolkit';
+
 const initialState = {
-    expression: "",
-    result: "",
+  expression: '',
+  result: '',
 };
 
-const calculatorReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case "UPDATE_EXPRESSION":
-            return {
-                ...state,
-                expression: action.payload,
-            }
-        case "UPDATE_RESULT":
-            return {
-                ...state,
-                result: action.payload,
-            }
-        case "CLEAR_CALCULATOR":
-            return {
-                ...initialState,
-            }                
-        default: 
-            return state;
-    }
-}
+const calculatorSlice = createSlice({
+  name: 'calculator',
+  initialState,
+  reducers: {
+    updateExpression: (state, action) => {
+      state.expression = action.payload;
+    },
+    updateResult: (state, action) => {
+      state.result = action.payload;
+    },
+    clearCalculator: (state) => {
+      state.expression = '';
+      state.result = '';
+    },
+  },
+});
 
-export default calculatorReducer;
+export const { updateExpression, updateResult, clearCalculator } = calculatorSlice.actions;
+export default calculatorSlice.reducer;

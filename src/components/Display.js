@@ -1,19 +1,17 @@
-import react from "react";
-import { connect } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 
-const Display = ({ expression }) => {
+const Display = ({ displayed }) => {
+
+    const expression = useSelector((state) => state.expression)
+    const result = useSelector((state) => state.result)    
+
     return (
-        <input 
-            type="text"
-            value={expression}
-            className="w-full h-12 px-4 text-2x1 bg-gray-100"
-            readOnly
-            />
+        <div id="display" className="col-span-4 bg-slate-950 text-right p-2 mb-2">
+            <div className="expression text-slate-100"><span style={{visibility: "hidden"}}>0</span>{expression} 500 + 2 </div>
+            <div className="result text-slate-100"><span style={{visibility: "hidden"}}>0</span>{result}= 502</div>
+        </div>
     );
 };
 
-const mapStateToProps = (state) => ({
-    expression: state.expression,
-});
-
-export default connect(mapStateToProps)(Display);
+export default Display;
