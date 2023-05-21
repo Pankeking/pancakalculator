@@ -21,7 +21,7 @@ const calculatorSlice = createSlice({
         const lastIsOperator = /[+*/]/.test(lastChar);
         const payloadOperator = /[+*/]/.test(action.payload)
 
-        if(stateLength === 1 && lastChar == 0) {
+        if(stateLength === 1 && lastChar === "0") {
             state.expression = action.payload;
         } else if (payloadOperator && lastIsOperator) {
             state.expression = state.expression.slice(0, -1).concat(action.payload);
