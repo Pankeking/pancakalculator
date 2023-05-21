@@ -1,19 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import calculatorReducer from "./features/calculatorSlice"
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const store = configureStore({
-  reducer: {
-    calculator: calculatorReducer,
-  }
-})
 root.render(
   <React.StrictMode>
     <App />

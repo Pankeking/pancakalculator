@@ -1,14 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { updateExpression, updateResult } from "../features/actions.js";
+import { updateExpression, updateResult, clearCalculator } from "../features/reducers.js";
 
 const Btn = ({ text, className }) => {
-
+    
     const dispatch = useDispatch();
-
     const handleClick = () => {
-        //dispatch(updateExpression(label))
-        //dispatch(updateResult(value))
+        if (text == "AC") {
+            dispatch(updateResult(100));
+        } else {
+            dispatch(updateExpression(text))
+        }
     }
 
     return (

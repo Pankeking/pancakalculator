@@ -2,14 +2,12 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  expression: '',
-  result: '',
-};
-
 const calculatorSlice = createSlice({
   name: 'calculator',
-  initialState,
+  initialState: {
+    expression: 25,
+    result: "",
+  },
   reducers: {
     updateExpression: (state, action) => {
       state.expression = action.payload;

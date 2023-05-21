@@ -1,12 +1,18 @@
 import './App.css';
-import Calculator from './components/CalculatorComp.js'; 
 import { Provider } from "react-redux";
+import Calculator from './components/CalculatorComp.js'; 
 import store from "./features/store.js";
 
 
 function App() {
   return (
     <Provider store={store}>
+      <h1 className='text-center font-black font-mono'>
+        Calculator made by <br/>
+        <a href="github" className='font-sans'>
+           Pankeking
+        </a>
+      </h1>
       <Calculator/>
     </Provider>
   );
