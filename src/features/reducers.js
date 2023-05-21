@@ -18,15 +18,15 @@ const calculatorSlice = createSlice({
 
         const stateLength = state.expression.length;
         const lastChar = state.expression[stateLength - 1];
-        const lastIsOperator = /[+*/-]/.test(lastChar);
+        const lastIsOperator = /[+*/]/.test(lastChar);
         const payloadOperator = /[+*/]/.test(action.payload)
 
         if(stateLength === 1 && lastChar == 0) {
             state.expression = action.payload;
         } else if (payloadOperator && lastIsOperator) {
             state.expression = state.expression.slice(0, -1).concat(action.payload);
-        } else if (/-/.test(lastChar) && /[+*/]/.test(action.payload)) {
-            state.expression = state.expression.slice(0, -1);
+        } else if (/[-]$/.test(lastChar) && /[+*/]/.test(action.payload)) {
+            state.expression = state.expression.replace(/[+*/-]+$/, action.payload);
         } else if (/\d+[.]\d+$/.test(state.expression) && /[.]/.test(action.payload)) {
             return;
         } else if (/[.]/.test(lastChar) && /[.]/.test(action.payload)) {
