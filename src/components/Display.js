@@ -10,9 +10,9 @@ const Display = () => {
     
 
     return (
-        <div id="display" className="col-span-4 bg-slate-950 text-right p-2 mb-2">
-            <div className="text-slate-100">Expression: <span style={{visibility: "hidden"}}>0</span>{expression}</div>
-            <div className="text-slate-100">Result: <span style={{visibility: "hidden"}}>0</span>{result}</div>
+        <div className="col-span-4 font-mono bg-slate-950 text-right p-2 mb-2">
+            <div id="display" className="text-slate-100"><span style={{visibility: "hidden"}}>0</span>{expression}</div>
+            <div className="text-red-300"><span style={{visibility: "hidden"}}>0</span>{result}</div>
         </div>
     );
 };
