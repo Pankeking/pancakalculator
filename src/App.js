@@ -9,7 +9,7 @@ function App() {
     <Provider store={store}>
       <h1 className='text-center font-black font-mono'>
         Calculator made by <br/>
-        <a href="github" className='font-sans'>
+        <a href="https://github.com/Pankeking/pancakalculator" className='font-sans'>
            Pankeking
         </a>
       </h1>
