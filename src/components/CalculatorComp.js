@@ -19,23 +19,23 @@ const Calculator = () => {
       <div className="calculator border-8 my-4 border-red-300 place-self-center mx-auto max-w-md p-8">
         <div className="grid grid-cols-4 gap-0">
           <Display />
-          <Btn text="AC" id="clear"    className="col-span-3 bg-indigo-500" />
-          <Btn text="/"  id="divide"   className="bg-yellow-500"/>
-          <Btn text="7"  id="seven"    className="bg-slate-600"/>
-          <Btn text="8"  id="eight"    className="bg-slate-600"/>
-          <Btn text="9"  id="nine"     className="bg-slate-600"/>
-          <Btn text="*"  id="multiply" className="bg-yellow-500"/>
-          <Btn text="4"  id="four"     className="bg-slate-600"/>
-          <Btn text="5"  id="five"     className="bg-slate-600"/>
-          <Btn text="6"  id="six"      className="bg-slate-600"/>
-          <Btn text="-"  id="subtract" className="bg-yellow-500"/>
-          <Btn text="1"  id="one"      className="bg-slate-600"/>
-          <Btn text="2"  id="two"      className="bg-slate-600"/>
-          <Btn text="3"  id="three"    className="bg-slate-600"/>
-          <Btn text="+"  id="sum"      className="bg-yellow-500"/>
-          <Btn text="0"  id="zero"     className="col-span-2 row-span-1 bg-slate-600" />
-          <Btn text="."  id="decimal"  className="col-span-1 bg-green-400"/>
-          <Btn text="="  id="equals"   className="col-span-1 row-span-1 bg-red-500" />
+          <Btn text="AC" idName="clear"    className="col-span-3 bg-indigo-500" />
+          <Btn text="/"  idName="divide"   className="bg-yellow-500"/>
+          <Btn text="7"  idName="seven"    className="bg-slate-600"/>
+          <Btn text="8"  idName="eight"    className="bg-slate-600"/>
+          <Btn text="9"  idName="nine"     className="bg-slate-600"/>
+          <Btn text="*"  idName="multiply" className="bg-yellow-500"/>
+          <Btn text="4"  idName="four"     className="bg-slate-600"/>
+          <Btn text="5"  idName="five"     className="bg-slate-600"/>
+          <Btn text="6"  idName="six"      className="bg-slate-600"/>
+          <Btn text="-"  idName="subtract" className="bg-yellow-500"/>
+          <Btn text="1"  idName="one"      className="bg-slate-600"/>
+          <Btn text="2"  idName="two"      className="bg-slate-600"/>
+          <Btn text="3"  idName="three"    className="bg-slate-600"/>
+          <Btn text="+"  idName="add"      className="bg-yellow-500"/>
+          <Btn text="0"  idName="zero"     className="col-span-2 row-span-1 bg-slate-600" />
+          <Btn text="."  idName="decimal"  className="col-span-1 bg-green-400"/>
+          <Btn text="="  idName="equals"   className="col-span-1 row-span-1 bg-red-500" />
         </div>
     </div>
     )

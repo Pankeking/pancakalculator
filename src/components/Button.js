@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { updateExpression, updateResult, clearCalculator } from "../features/reducers.js";
 
-const Btn = ({ text, className }) => {
+const Btn = ({ text, className, idName }) => {
 
     let symbol = "";
     
@@ -25,7 +25,7 @@ const Btn = ({ text, className }) => {
                 dispatch(clearCalculator());
                 break;
             case "operator":
-                dispatch(updateExpression(" " + text + " "))
+                dispatch(updateExpression(text))
                 break;
             case "equal":
                 dispatch(updateResult())
@@ -44,6 +44,7 @@ const Btn = ({ text, className }) => {
 
     return (
         <button 
+            id={idName}
             className={`bg-gray-300 py-2 text-center font-black font-mono cursor-pointer border-8 opacity-75 hover:opacity-100 rounded-full ${className}`}
             onClick={handleClick}
         >
