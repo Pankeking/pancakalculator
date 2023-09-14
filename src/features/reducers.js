@@ -15,7 +15,7 @@ const calculatorSlice = createSlice({
   },
   reducers: {
     updateExpression: (state, action) => {
-
+// Todo: Use Dijkstra's two stack algorithm
         const stateLength = state.expression.length;
         const lastChar = state.expression[stateLength - 1];
         const lastIsOperator = /[+*/]/.test(lastChar);
