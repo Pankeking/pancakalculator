@@ -21,8 +21,8 @@ const calculatorSlice = createSlice({
             const lastIsOperator = /[+*/]/.test(lastChar);
             const payloadOperator = /[+*/]/.test(action.payload)
 
-            let values = [];
-            let operators = [];
+            // let values = [];
+            // let operators = [];
 
 
             if(stateLength === 1 && lastChar === "0") {
