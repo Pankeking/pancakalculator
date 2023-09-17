@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { updateExpression, updateResult, clearCalculator } from "../features/reducers.js";
 
-const Btn = ({ text, className, idName }) => {
+const Btn = ({ text, className, idName, type }) => {
 
     let symbol = "";
     
@@ -18,6 +18,8 @@ const Btn = ({ text, className, idName }) => {
         symbol = "equal";
     // } else if (text === "1" || text === "2" || text === "3" || text === "4" || text === "5" || text === "6" || text === "7" || text === "8" || text === "9" || text === "0") {
     //     symbol = "number";
+    } else {
+        symbol ="update";
     }
 
     const dispatch = useDispatch();
@@ -26,17 +28,11 @@ const Btn = ({ text, className, idName }) => {
             case "clear":
                 dispatch(clearCalculator());
                 break;
-            case "operator":
+            case "update":
                 dispatch(updateExpression(text))
                 break;
             case "equal":
                 dispatch(updateResult())
-                break;
-            case "number":
-                dispatch(updateExpression(text))
-                break;
-            case "decimal":
-                dispatch(updateExpression(text))
                 break;
             default:
                 break;

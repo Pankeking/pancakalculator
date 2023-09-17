@@ -16,10 +16,10 @@ const calculatorSlice = createSlice({
     reducers: {
         updateExpression: (state, action) => {
         // Todo: Use Dijkstra's two stack algorithm
-            let stateLength = state.expression.length;
-            let lastChar = state.expression[stateLength - 1];
-            let lastIsOperator = /[+*/]/.test(lastChar);
-            let payloadOperator = /[+*/]/.test(action.payload)
+            const stateLength = state.expression.length;
+            const lastChar = state.expression[stateLength - 1];
+            const lastIsOperator = /[+*/]/.test(lastChar);
+            const payloadOperator = /[+*/]/.test(action.payload)
 
             let values = [];
             let operators = [];
