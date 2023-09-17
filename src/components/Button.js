@@ -6,16 +6,18 @@ const Btn = ({ text, className, idName }) => {
 
     let symbol = "";
     
-    if (text === "/" || text === "*" || text === "+" || text === "-") {
-        symbol = "operator";
-    } else if (text === "AC") {
+
+    // if (text === "/" || text === "*" || text === "+" || text === "-") {
+    //     symbol = "operator";
+    if (text === "AC") {
         symbol = "clear";
-    } else if (text === ".") {
-        symbol = "decimal";
+        
+    //  else if (text === ".") {
+    //     symbol = "decimal";
     } else if (text === "=") {
         symbol = "equal";
-    } else if (text === "1" || text === "2" || text === "3" || text === "4" || text === "5" || text === "6" || text === "7" || text === "8" || text === "9" || text === "0") {
-        symbol = "number";
+    // } else if (text === "1" || text === "2" || text === "3" || text === "4" || text === "5" || text === "6" || text === "7" || text === "8" || text === "9" || text === "0") {
+    //     symbol = "number";
     }
 
     const dispatch = useDispatch();
