@@ -11,10 +11,10 @@ const Btn = ({ text, className, idName, type }) => {
                 dispatch(clearCalculator());
                 break;
             case "operator":
-                dispatch(updateExpression({text: text, type: type}))    
+                dispatch(updateExpression(text))    
                 break;
             case "value":
-                dispatch(updateExpression({text: text, type: type}))    
+                dispatch(updateExpression(text))    
                 break;
             case "result":
                 dispatch(updateResult())
